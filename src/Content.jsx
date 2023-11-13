@@ -2,6 +2,7 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 import { ProductsIndex } from "./ProductsIndex";
 import { ProductsNew } from "./ProductsNew";
+import { Modal } from "./Modal";
 
 export function Content() {
   const [products, setProducts] = useState([]);
@@ -28,6 +29,9 @@ export function Content() {
     <div>
       <ProductsIndex products={products} />
       <ProductsNew onCreateProduct={handleCreateProduct} />
+      <Modal show={true}>
+        <h1>test</h1>
+      </Modal>
     </div>
   );
 }
